@@ -1,0 +1,167 @@
+﻿.service-a {
+	height: 651px;
+	background: url(../images/service-a-bg.jpg) center 0 no-repeat
+}
+.service-b {
+	height: 900px;
+	background: url(../images/service-b1.jpg) center no-repeat;
+	background-color: #225335;
+}
+.service-box {
+	width: 100%;
+	text-align: center;
+	padding-top: 60px
+}
+.service-box h2 {
+	margin: 0 0 30px;
+	font-size: 40px;
+	color: #ffffff
+}
+.service-box p {
+	font-size: 20px;
+	line-height: 34px;
+	color: #ffffff;
+	margin-bottom: 23px;
+			    width: 80%;
+    margin: 0 10%;
+
+}
+.service-c {
+	position: relative;
+	height: 817px;
+	background: url(../images/service-c1.jpg) center 0 no-repeat
+}
+.service-c .service-box h2 {
+	color: #00800d
+}
+.service-c .service-box p {
+	font-size: 23px;
+	color: #00800d;
+	    width: 80%;
+    margin: 0 10%;
+}
+.service-c .service-five-list {
+	padding-top: 30px
+}
+.service-c .service-five-list:before, .service-c .service-five-list:after {
+	content: " ";
+	display: table
+}
+.service-c .service-five-list:after {
+	clear: both
+}
+.service-c .service-five-list li {
+	float: left;
+	width: 80%;
+	height: 74px;
+	line-height: 72px;
+	text-align: center;
+	border: 1px solid #00800d;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	font-size: 18px;
+	color: #00800d;
+	margin: 10px 10%;
+}
+.service-c .link-bar {
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	right: 0;
+	margin-left: -72px
+}
+.service-c .link-bar i {
+	float: left;
+	width: 90px;
+	height: 84px;
+	line-height: 84px;
+	text-align: center;
+	font-size: 45px;
+	background-color: #22262b;
+	color: #ffffff
+}
+.service-c .link-bar p {
+	overflow: hidden;
+	padding: 0 45px;
+	line-height: 84px;
+	font-size: 21px;
+	color: #ffffff;
+	background-color: #00800d
+}
+.service-d {
+	position: relative;
+	height: 584px;
+	background: url(../images/service-d1.jpg) center 0 no-repeat
+}
+.service-d .service-box h2 strong {
+	font-size: 100px;
+	font-weight: normal;
+	margin: 0 5px
+}
+.service-d .service-box .btn {
+	width: 160px;
+	height: 48px;
+	font-size: 20px;
+	color: #75df84;
+	border: 1px solid #75df84
+}
+.service-e {
+	position: relative;
+	height: 617px;
+	background: url(../images/service-e1.jpg) center 0 no-repeat
+}
+.service-e .service-box h2 {
+	color: #00800d
+}
+.service-e .service-box p {
+	font-size: 23px;
+	color: #00800d
+}
+.service-e .link-bar {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 50%;
+	margin-right: -18px
+}
+.service-e .link-bar i {
+	float: right;
+	width: 90px;
+	height: 84px;
+	line-height: 84px;
+	text-align: center;
+	font-size: 45px;
+	background-color: #22262b;
+	color: #ffffff
+}
+.service-e .link-bar p {
+	text-align: right;
+	overflow: hidden;
+	padding: 0 45px;
+	line-height: 84px;
+	font-size: 21px;
+	color: #ffffff;
+	background-color: #00800d
+}
+.service-f {
+	position: relative;
+	height: 684px;
+	background: url(../images/service-f1.jpg) center 0 no-repeat
+}
+.service-g {
+	position: relative;
+	height: 784px;
+	background: url(../images/service-g.jpg) center 0 no-repeat
+}
+.service-g .service-box h2, .service-g .service-box p {
+	color: #2a404c
+}
+.service-g .service-box .btn {
+	width: 160px;
+	height: 48px;
+	font-size: 20px;
+	color: #2a404c;
+	border: 1px solid #2a404c
+}
+/*# sourceMappingURL=topic-service.css.map */

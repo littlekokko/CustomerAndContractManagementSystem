@@ -1,0 +1,76 @@
+﻿<!doctype html>
+<html class="x-admin-sm">
+<head>
+    <meta charset="UTF-8">
+    <title>新用户注册</title>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="stylesheet" href="/css/font.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/xadmin.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script src="/lib/layui/layui.js" charset="utf-8"></script>
+</head>
+<body class="login-bg">
+    <div class="layui-fluid">
+        <div class="layui-row">
+            <form class="layui-form">
+                <div class="layui-form-item">
+                    <label for="AdminNamel" class="layui-form-label">
+                        <span class="x-red">*</span>用户名
+                    </label>
+                    <div class="layui-input-inline">
+                        <input type="text" id="AdminName" name="AdminName" required="" lay-verify="AdminName" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="AdminNamel" class="layui-form-label">
+                        <span class="x-red">*</span>重复用户名
+                    </label>
+                    <div class="layui-input-inline">
+                        <input type="text" id="AdminName" name="AdminName_r" required="" lay-verify="AdminName" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="L_repass" class="layui-form-label"></label>
+                    <button class="layui-btn" lay-filter="add" lay-submit="">删除</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            layui.use('form', function () {
+                var form = layui.form;
+                var layer = layui.layer;
+                form.on('submit(add)', function (data) {
+                    $.ajax({
+                        type: "get",
+                        dataType: "json",
+                        url: "http://localhost:2000/api/tbAdmin/Delete?AdminUser=" + data.field.AdminName+"",
+                        success: function (result) {
+                            var str = "";
+                            var data1 = result.rows;
+                            if (result.errorMsg) {
+                                alert(result.errorMsg);
+                            } else {
+                                if (!window.localStorage) {
+                                    alert("浏览器不支持localStorage");
+                                } else {
+                                    var storage = window.localStorage;
+                                    storage.setItem("AdminName", data.field.AdminName);
+                                    storage.setItem("AdminPassword", data.field.password);
+                                    alert("删除成功");
+                                }
+                            }
+                        }
+                    });
+                    return false;
+                });
+            });
+        })
+    </script>
+</body>
+</html>

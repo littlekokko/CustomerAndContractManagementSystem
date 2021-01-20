@@ -1,0 +1,1220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ED6229B9-D862-4B37-9AB7-DF11DEDBA59D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication1</RootNamespace>
+    <AssemblyName>WebApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\..\..\OA\mingjia\Web\Bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNetPager">
+      <HintPath>..\..\..\OA\mingjia\Web\Bin\AspNetPager.dll</HintPath>
+    </Reference>
+    <Reference Include="COM.Excel">
+      <HintPath>..\..\..\OA\mingjia\Web\Bin\COM.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="CUCalendar">
+      <HintPath>..\..\..\OA\mingjia\Web\Bin\CUCalendar.dll</HintPath>
+    </Reference>
+    <Reference Include="DynamicJson">
+      <HintPath>..\..\DynamicJson.dll</HintPath>
+    </Reference>
+    <Reference Include="EeekSoft.Web.PopupWin">
+      <HintPath>..\..\..\OA\mingjia\Web\Bin\EeekSoft.Web.PopupWin.dll</HintPath>
+    </Reference>
+    <Reference Include="Excel">
+      <HintPath>..\..\..\OA\mingjia\Web\Bin\Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="FredCK.FCKeditorV2">
+      <HintPath>..\..\..\OA\mingjia\Web\Bin\FredCK.FCKeditorV2.dll</HintPath>
+    </Reference>
+    <Reference Include="IBatisNet.Common">
+      <HintPath>..\..\..\OA\mingjia\Web\Bin\IBatisNet.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="IBatisNet.DataMapper">
+      <HintPath>..\..\..\..\..\工具\动软\Template\CodematicDemoS3p\Lib\IBatisNet.DataMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="LitJSON">
+      <HintPath>..\..\..\OA\mingjia\Web\Bin\LitJSON.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Vbe.Interop, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\OA\mingjia\Web\Bin\Microsoft.Vbe.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\..\工具\动软\Template\CodematicDemoS3p\Lib\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\OA\mingjia\Web\Bin\office.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenSmtp">
+      <HintPath>..\..\..\OA\mingjia\Web\Bin\OpenSmtp.dll</HintPath>
+    </Reference>
+    <Reference Include="OWC10Chart">
+      <HintPath>..\..\..\OA\mingjia\Web\Bin\OWC10Chart.dll</HintPath>
+    </Reference>
+    <Reference Include="SJTT.Sms">
+      <HintPath>..\..\..\OA\mingjia\Web\Bin\SJTT.Sms.dll</HintPath>
+    </Reference>
+    <Reference Include="SJTT.Utils">
+      <HintPath>..\..\..\OA\mingjia\Web\Bin\SJTT.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.0.0\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.0.0\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.0.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="TTSMSProvider">
+      <HintPath>..\..\..\OA\mingjia\Web\Bin\TTSMSProvider.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BackStage\index_staff.html" />
+    <Content Include="BackStage\tbStaffLogin_staff\tbStaffLogin_edit.html" />
+    <Content Include="BackStage\tbStaffLogin_staff\tbStaffLogin_list.html" />
+    <Content Include="BackStage\tbAdmin\tbAdmin_delete.html" />
+    <Content Include="BackStage\tbAdmin\tbAdmin_add.html" />
+    <Content Include="BackStage\tbAdmin\tbAdmin_edit.html" />
+    <Content Include="BackStage\tbAdmin\tbAdmin_list.html" />
+    <Content Include="BackStage\css\font.css" />
+    <Content Include="BackStage\css\formSelects-v4.css" />
+    <Content Include="BackStage\css\login.css" />
+    <Content Include="BackStage\css\theme1.css" />
+    <Content Include="BackStage\css\theme2.css" />
+    <Content Include="BackStage\css\theme3.css" />
+    <Content Include="BackStage\css\theme4.css" />
+    <Content Include="BackStage\css\theme5.css" />
+    <Content Include="BackStage\css\xadmin.css" />
+    <Content Include="BackStage\fonts\iconfont.svg" />
+    <Content Include="BackStage\images\aiwrap.png" />
+    <Content Include="BackStage\images\bg.png" />
+    <Content Include="BackStage\index.html" />
+    <Content Include="BackStage\js\formSelects-v4.css" />
+    <Content Include="BackStage\js\formSelects-v4.js" />
+    <Content Include="BackStage\js\formSelects-v4.min.js" />
+    <Content Include="BackStage\js\fuwenben\.git\ms-persist.xml" />
+    <Content Include="BackStage\js\fuwenben\Content\ace\ace.js" />
+    <Content Include="BackStage\js\fuwenben\Content\ace\mode-html.js" />
+    <Content Include="BackStage\js\fuwenben\Content\ace\snippets\html.js" />
+    <Content Include="BackStage\js\fuwenben\Content\ace\theme-tomorrow.js" />
+    <Content Include="BackStage\js\fuwenben\Content\ace\worker-html.js" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\css\layui.css" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\css\layui.mobile.css" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\css\modules\code.css" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\css\modules\laydate\default\laydate.css" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\css\modules\layer\default\icon-ext.png" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\css\modules\layer\default\icon.png" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\css\modules\layer\default\layer.css" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\css\modules\layer\default\loading-0.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\css\modules\layer\default\loading-1.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\css\modules\layer\default\loading-2.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\font\iconfont.svg" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\0.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\1.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\10.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\11.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\12.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\13.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\14.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\15.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\16.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\17.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\18.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\19.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\2.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\20.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\21.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\22.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\23.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\24.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\25.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\26.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\27.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\28.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\29.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\3.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\30.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\31.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\32.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\33.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\34.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\35.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\36.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\37.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\38.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\39.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\4.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\40.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\41.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\42.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\43.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\44.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\45.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\46.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\47.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\48.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\49.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\5.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\50.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\51.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\52.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\53.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\54.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\55.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\56.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\57.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\58.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\59.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\6.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\60.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\61.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\62.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\63.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\64.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\65.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\66.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\67.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\68.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\69.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\7.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\70.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\71.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\8.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\images\face\9.gif" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\layui.all.js" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\layui.js" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\lay\modules\carousel.js" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\lay\modules\code.js" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\lay\modules\colorpicker.js" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\lay\modules\element.js" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\lay\modules\flow.js" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\lay\modules\form.js" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\lay\modules\jquery.js" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\lay\modules\laydate.js" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\lay\modules\layedit-原版.js" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\lay\modules\layedit.js" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\lay\modules\layer.js" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\lay\modules\laypage.js" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\lay\modules\laytpl.js" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\lay\modules\mobile.js" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\lay\modules\rate.js" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\lay\modules\slider.js" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\lay\modules\table.js" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\lay\modules\tree.js" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\lay\modules\upload.js" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\lay\modules\util.js" />
+    <Content Include="BackStage\js\fuwenben\dist\layedit.js" />
+    <Content Include="BackStage\js\fuwenben\index.html" />
+    <Content Include="BackStage\js\jquery.min.js" />
+    <Content Include="BackStage\js\layui_exts\excel.js" />
+    <Content Include="BackStage\js\layui_exts\xlsx.js" />
+    <Content Include="BackStage\js\xadmin.js" />
+    <Content Include="BackStage\js\xcity.js" />
+    <Content Include="BackStage\lib\layui\css\layui.css" />
+    <Content Include="BackStage\lib\layui\css\layui.mobile.css" />
+    <Content Include="BackStage\lib\layui\css\modules\code.css" />
+    <Content Include="BackStage\lib\layui\css\modules\laydate\default\laydate.css" />
+    <Content Include="BackStage\lib\layui\css\modules\layer\default\icon-ext.png" />
+    <Content Include="BackStage\lib\layui\css\modules\layer\default\icon.png" />
+    <Content Include="BackStage\lib\layui\css\modules\layer\default\layer.css" />
+    <Content Include="BackStage\lib\layui\css\modules\layer\default\loading-0.gif" />
+    <Content Include="BackStage\lib\layui\css\modules\layer\default\loading-1.gif" />
+    <Content Include="BackStage\lib\layui\css\modules\layer\default\loading-2.gif" />
+    <Content Include="BackStage\lib\layui\font\iconfont.svg" />
+    <Content Include="BackStage\lib\layui\images\face\0.gif" />
+    <Content Include="BackStage\lib\layui\images\face\1.gif" />
+    <Content Include="BackStage\lib\layui\images\face\10.gif" />
+    <Content Include="BackStage\lib\layui\images\face\11.gif" />
+    <Content Include="BackStage\lib\layui\images\face\12.gif" />
+    <Content Include="BackStage\lib\layui\images\face\13.gif" />
+    <Content Include="BackStage\lib\layui\images\face\14.gif" />
+    <Content Include="BackStage\lib\layui\images\face\15.gif" />
+    <Content Include="BackStage\lib\layui\images\face\16.gif" />
+    <Content Include="BackStage\lib\layui\images\face\17.gif" />
+    <Content Include="BackStage\lib\layui\images\face\18.gif" />
+    <Content Include="BackStage\lib\layui\images\face\19.gif" />
+    <Content Include="BackStage\lib\layui\images\face\2.gif" />
+    <Content Include="BackStage\lib\layui\images\face\20.gif" />
+    <Content Include="BackStage\lib\layui\images\face\21.gif" />
+    <Content Include="BackStage\lib\layui\images\face\22.gif" />
+    <Content Include="BackStage\lib\layui\images\face\23.gif" />
+    <Content Include="BackStage\lib\layui\images\face\24.gif" />
+    <Content Include="BackStage\lib\layui\images\face\25.gif" />
+    <Content Include="BackStage\lib\layui\images\face\26.gif" />
+    <Content Include="BackStage\lib\layui\images\face\27.gif" />
+    <Content Include="BackStage\lib\layui\images\face\28.gif" />
+    <Content Include="BackStage\lib\layui\images\face\29.gif" />
+    <Content Include="BackStage\lib\layui\images\face\3.gif" />
+    <Content Include="BackStage\lib\layui\images\face\30.gif" />
+    <Content Include="BackStage\lib\layui\images\face\31.gif" />
+    <Content Include="BackStage\lib\layui\images\face\32.gif" />
+    <Content Include="BackStage\lib\layui\images\face\33.gif" />
+    <Content Include="BackStage\lib\layui\images\face\34.gif" />
+    <Content Include="BackStage\lib\layui\images\face\35.gif" />
+    <Content Include="BackStage\lib\layui\images\face\36.gif" />
+    <Content Include="BackStage\lib\layui\images\face\37.gif" />
+    <Content Include="BackStage\lib\layui\images\face\38.gif" />
+    <Content Include="BackStage\lib\layui\images\face\39.gif" />
+    <Content Include="BackStage\lib\layui\images\face\4.gif" />
+    <Content Include="BackStage\lib\layui\images\face\40.gif" />
+    <Content Include="BackStage\lib\layui\images\face\41.gif" />
+    <Content Include="BackStage\lib\layui\images\face\42.gif" />
+    <Content Include="BackStage\lib\layui\images\face\43.gif" />
+    <Content Include="BackStage\lib\layui\images\face\44.gif" />
+    <Content Include="BackStage\lib\layui\images\face\45.gif" />
+    <Content Include="BackStage\lib\layui\images\face\46.gif" />
+    <Content Include="BackStage\lib\layui\images\face\47.gif" />
+    <Content Include="BackStage\lib\layui\images\face\48.gif" />
+    <Content Include="BackStage\lib\layui\images\face\49.gif" />
+    <Content Include="BackStage\lib\layui\images\face\5.gif" />
+    <Content Include="BackStage\lib\layui\images\face\50.gif" />
+    <Content Include="BackStage\lib\layui\images\face\51.gif" />
+    <Content Include="BackStage\lib\layui\images\face\52.gif" />
+    <Content Include="BackStage\lib\layui\images\face\53.gif" />
+    <Content Include="BackStage\lib\layui\images\face\54.gif" />
+    <Content Include="BackStage\lib\layui\images\face\55.gif" />
+    <Content Include="BackStage\lib\layui\images\face\56.gif" />
+    <Content Include="BackStage\lib\layui\images\face\57.gif" />
+    <Content Include="BackStage\lib\layui\images\face\58.gif" />
+    <Content Include="BackStage\lib\layui\images\face\59.gif" />
+    <Content Include="BackStage\lib\layui\images\face\6.gif" />
+    <Content Include="BackStage\lib\layui\images\face\60.gif" />
+    <Content Include="BackStage\lib\layui\images\face\61.gif" />
+    <Content Include="BackStage\lib\layui\images\face\62.gif" />
+    <Content Include="BackStage\lib\layui\images\face\63.gif" />
+    <Content Include="BackStage\lib\layui\images\face\64.gif" />
+    <Content Include="BackStage\lib\layui\images\face\65.gif" />
+    <Content Include="BackStage\lib\layui\images\face\66.gif" />
+    <Content Include="BackStage\lib\layui\images\face\67.gif" />
+    <Content Include="BackStage\lib\layui\images\face\68.gif" />
+    <Content Include="BackStage\lib\layui\images\face\69.gif" />
+    <Content Include="BackStage\lib\layui\images\face\7.gif" />
+    <Content Include="BackStage\lib\layui\images\face\70.gif" />
+    <Content Include="BackStage\lib\layui\images\face\71.gif" />
+    <Content Include="BackStage\lib\layui\images\face\8.gif" />
+    <Content Include="BackStage\lib\layui\images\face\9.gif" />
+    <Content Include="BackStage\lib\layui\layui.all.js" />
+    <Content Include="BackStage\lib\layui\layui.js" />
+    <Content Include="BackStage\lib\layui\lay\modules\Blob.js" />
+    <Content Include="BackStage\lib\layui\lay\modules\carousel.js" />
+    <Content Include="BackStage\lib\layui\lay\modules\code.js" />
+    <Content Include="BackStage\lib\layui\lay\modules\colorpicker.js" />
+    <Content Include="BackStage\lib\layui\lay\modules\element.js" />
+    <Content Include="BackStage\lib\layui\lay\modules\FileSaver.js" />
+    <Content Include="BackStage\lib\layui\lay\modules\flow.js" />
+    <Content Include="BackStage\lib\layui\lay\modules\form.js" />
+    <Content Include="BackStage\lib\layui\lay\modules\jquery.js" />
+    <Content Include="BackStage\lib\layui\lay\modules\jszip.js" />
+    <Content Include="BackStage\lib\layui\lay\modules\laydate.js" />
+    <Content Include="BackStage\lib\layui\lay\modules\layedit.js" />
+    <Content Include="BackStage\lib\layui\lay\modules\layer.js" />
+    <Content Include="BackStage\lib\layui\lay\modules\laypage.js" />
+    <Content Include="BackStage\lib\layui\lay\modules\laytpl.js" />
+    <Content Include="BackStage\lib\layui\lay\modules\mobile.js" />
+    <Content Include="BackStage\lib\layui\lay\modules\polyfill.js" />
+    <Content Include="BackStage\lib\layui\lay\modules\rate.js" />
+    <Content Include="BackStage\lib\layui\lay\modules\shim.js" />
+    <Content Include="BackStage\lib\layui\lay\modules\slider.js" />
+    <Content Include="BackStage\lib\layui\lay\modules\table.js" />
+    <Content Include="BackStage\lib\layui\lay\modules\tree.js" />
+    <Content Include="BackStage\lib\layui\lay\modules\upload.js" />
+    <Content Include="BackStage\lib\layui\lay\modules\util.js" />
+    <Content Include="BackStage\login.html" />
+    <Content Include="BackStage\tbCustomer\tbCustomer_LX.html" />
+    <Content Include="BackStage\tbRenew\tbRenew_add.html" />
+    <Content Include="BackStage\tbRenew\tbRenew_edit.html" />
+    <Content Include="BackStage\tbRenew\tbRenew_list.html" />
+    <Content Include="BackStage\tbContract\tbContract_add.html" />
+    <Content Include="BackStage\tbContract\tbContract_edit.html" />
+    <Content Include="BackStage\tbContract\tbContract_list.html" />
+    <Content Include="BackStage\tbStaffLogin_staff\tbStaffLogin_add.html" />
+    <Content Include="BackStage\tbStaff\tbStaff_add.html" />
+    <Content Include="BackStage\tbStaff\tbStaff_edit.html" />
+    <Content Include="BackStage\tbStaff\tbStaffLogin_list.html" />
+    <Content Include="BackStage\tbStaff\tbStaff_list.html" />
+    <Content Include="BackStage\tbCustomer\tbCustomer_add.html" />
+    <Content Include="BackStage\tbCustomer\tbCustomer_edit.html" />
+    <Content Include="BackStage\tbCustomer\tbCustomer_list.html" />
+    <Content Include="BackStage\tbProjectClass\tbProjectClass_add.html" />
+    <Content Include="BackStage\tbProjectClass\tbProjectClass_edit.html" />
+    <Content Include="BackStage\tbProjectClass\tbProjectClass_list.html" />
+    <Content Include="BackStage\tbContractClass\tbContractClass_add.html" />
+    <Content Include="BackStage\tbContractClass\tbContractClass_edit.html" />
+    <Content Include="BackStage\tbContractClass\tbContractClass_list.html" />
+    <Content Include="BackStage\tbCustomerClass\tbCustomerClass_add.html" />
+    <Content Include="BackStage\tbCustomerClass\tbCustomerClass_edit.html" />
+    <Content Include="BackStage\tbCustomerClass\tbCustomerClass_list.html" />
+    <Content Include="BackStage\tbDiscussion\tbDiscussion_add.html" />
+    <Content Include="BackStage\tbDiscussion\tbDiscussion_edit.html" />
+    <Content Include="BackStage\tbDiscussion\tbDiscussion_list.html" />
+    <Content Include="BackStage\welcome.html" />
+    <Content Include="BackStage\welcome1.html" />
+    <Content Include="bin\WebApplication1.dll" />
+    <Content Include="bin\WebApplication1.pdb" />
+    <Content Include="css\9f225659affc4d3aa7262813f254fe4d.css" />
+    <Content Include="css\bootstrap-select.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min-2.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\bootstrap4.1.css" />
+    <Content Include="css\by.css" />
+    <Content Include="css\demo.css" />
+    <Content Include="css\flexible-bootstrap-carousel.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\main.css" />
+    <Content Include="css\normalize.css" />
+    <Content Include="css\responsive.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\styles.css" />
+    <Content Include="css\topic-about.css" />
+    <Content Include="css\topic-private-custom.css" />
+    <Content Include="css\topic-service.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="img\dingwei.png" />
+    <Content Include="img\ewm.png" />
+    <Content Include="img\flbg.png" />
+    <Content Include="img\jiantou.png" />
+    <Content Include="img\jstx.png" />
+    <Content Include="img\logo-d.png" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\lunbotu.png" />
+    <Content Include="img\qnkf.png" />
+    <Content Include="img\toutu.jpg" />
+    <Content Include="img\xiaoqu.png" />
+    <Content Include="img\you1.png" />
+    <Content Include="img\you2.png" />
+    <Content Include="img\zhenewr.png" />
+    <Content Include="img\zixun.png" />
+    <Content Include="img\zjby.png" />
+    <Content Include="img\zuo1.png" />
+    <Content Include="img\zuo2.png" />
+    <Content Include="img\购物车_填写订单.jpg" />
+    <Content Include="index.html" />
+    <Content Include="js\bootstrap-select.min.js" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min-2.js" />
+    <Content Include="js\bootstrap.min.4.1.0.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\flexible-bootstrap-carousel.js" />
+    <Content Include="js\jquery-1.11.0.min.js" />
+    <Content Include="js\jquery-2.1.1.min.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\popper.min.js" />
+    <Content Include="js\script.js" />
+    <Content Include="packages.config" />
+    <Content Include="BackStage\fonts\iconfont.eot" />
+    <Content Include="BackStage\fonts\iconfont.ttf" />
+    <Content Include="BackStage\fonts\iconfont.woff" />
+    <Content Include="BackStage\lib\layui\font\iconfont.eot" />
+    <Content Include="BackStage\lib\layui\font\iconfont.ttf" />
+    <Content Include="BackStage\lib\layui\font\iconfont.woff" />
+    <Content Include="BackStage\js\fuwenben\.gitattributes" />
+    <Content Include="BackStage\js\fuwenben\.gitignore" />
+    <Content Include="BackStage\js\fuwenben\.git\COMMIT_EDITMSG" />
+    <Content Include="BackStage\js\fuwenben\.git\config" />
+    <Content Include="BackStage\js\fuwenben\.git\description" />
+    <Content Include="BackStage\js\fuwenben\.git\FETCH_HEAD" />
+    <Content Include="BackStage\js\fuwenben\.git\HEAD" />
+    <Content Include="BackStage\js\fuwenben\.git\hooks\applypatch-msg.sample" />
+    <Content Include="BackStage\js\fuwenben\.git\hooks\commit-msg.sample" />
+    <Content Include="BackStage\js\fuwenben\.git\hooks\post-update.sample" />
+    <Content Include="BackStage\js\fuwenben\.git\hooks\pre-applypatch.sample" />
+    <Content Include="BackStage\js\fuwenben\.git\hooks\pre-commit.sample" />
+    <Content Include="BackStage\js\fuwenben\.git\hooks\pre-push.sample" />
+    <Content Include="BackStage\js\fuwenben\.git\hooks\pre-rebase.sample" />
+    <Content Include="BackStage\js\fuwenben\.git\hooks\pre-receive.sample" />
+    <Content Include="BackStage\js\fuwenben\.git\hooks\prepare-commit-msg.sample" />
+    <Content Include="BackStage\js\fuwenben\.git\hooks\update.sample" />
+    <Content Include="BackStage\js\fuwenben\.git\index" />
+    <Content Include="BackStage\js\fuwenben\.git\info\exclude" />
+    <Content Include="BackStage\js\fuwenben\.git\logs\HEAD" />
+    <Content Include="BackStage\js\fuwenben\.git\logs\refs\heads\master" />
+    <Content Include="BackStage\js\fuwenben\.git\logs\refs\remotes\origin\HEAD" />
+    <Content Include="BackStage\js\fuwenben\.git\logs\refs\remotes\origin\master" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\00\b8c4b4a4adf55a70ea72b0f12af20af41fb8b6" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\00\f3a7ef42870a4a4e00e00ef7a1f2bd81c8f664" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\01\0cbb2fa1544cc80a12050aaf49e441ec389945" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\01\7654da72bdae0a218a4cc3483a7f149d3b388d" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\01\9c38bfd1354c66fece8d751c74070a1622865e" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\02\df587c4408db744e2e05aa3adfcbe7c05b4453" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\04\34952ead7a43fc83cbe3f7dccf87bce4de1642" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\04\e075493606fb29fa002868fc0fe176e6a666be" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\04\ee6220a010962ccf2997b99678bc5d33a14b3a" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\06\60891c4fc02fc5841af7825270230fd2752489" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\06\a47590b6641141f25fc95d93be69e8cb47a1eb" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\06\fdd6314a3ddabe15e92e3e3405a5ae57d63400" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\07\3b0c7582b3ce658a3d178e7f921fb9bb9f2a35" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\07\e5bd483912281d5b06ec1f183d1d55c559414c" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\07\f05aa7df05b01517eaf29b0f794d2872e0ef41" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\08\1decdd36a10a7b75955a64d35005eaefeb008a" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\08\644f0cb996c5d0e315c1ea69a18b09e044dbda" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\09\82855c300ad97e3e58b631772f71cf09e6c82d" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\0a\76e69f16ad735933572d27dae390c3aabf060e" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\0a\78d070228b71203ef3ff7f16531acad9b39a65" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\0a\81ca64baf5c57fe49323d9c719d78258ec83fe" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\0a\bc04f2b24b2d2cce68ce6db38eab614a583649" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\0a\fbb1bfe83d81f9879190a895596eec35bc52c5" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\0b\0085740622a960079bc00e62d21af6125a2a40" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\0c\ff8c324a0a8c816628dbb47a5f5a2d87b8b473" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\0e\298c5bf22f3dce5102f46dfdc267d3adbdd537" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\0e\b4f5479744a1956acee756a8497c8eac5311de" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\0e\e28da5316bdcf4bf1e3fb8a265431f7c94d299" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\0f\3c39c49235fc425690addf4a0832ebdae428a3" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\0f\58d7647197d88a326ecf8dee371526fda1f3ac" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\0f\6c0f48fe0ff1ab32fb8cd0701c63f4f676d179" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\10\999e63020433eb56dcb6a975b6aed1e01d00f2" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\10\baa0e774486c5689af98f7de45a62701777bba" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\10\c3c2c96aff80df8a8159b8d484342327dd1d8c" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\10\d8e74107da58e91053c788cd6c8559b9c4dc5f" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\10\f036049060cc54ed9227af5f3cf6c415ca60ed" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\11\96ee7cd28efc54a52f5910ecd5e524d40c4f07" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\12\0de1d89920cf542c42e1e7d15866f3149575be" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\13\19f21179aaecb4345bec0dd35630ce52061b6b" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\13\5edf1934d9b272486bb62b4b2007da6bb9319c" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\14\74d4b4bd137d9ab616113e8dff1237d88fd489" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\14\9851bcb779732f2c5cc927a75dd85703fd16ff" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\15\5d0c52db4194fafda11d7701b2b71637a71716" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\15\d99763e15238384a460f74e3acde8056345743" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\16\4662854a102e175c2998c305d1ddaf85903139" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\16\6233cc9cc157aceb75e624acf0712e56b5430a" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\16\c8e123ddb0e3deb0ef41c0de67555044a6a26f" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\17\5c3f22302582ea04a209ebe26720ad01ca5258" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\17\c35b70b1193f35539375fc892b76c1080fa543" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\18\04908cd4d357c5ab5420a7282d2f3748ba0d24" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\18\394ba01d162621e872ba0c0f97be2e0461f1b0" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\19\0f91b2278353eb444462c7bcae5241316e6cd4" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\19\b76ce679d16dfdf573780326ec78419dfe182e" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\19\bdf986c3b1f5e2cc4334ec5ab54454a885d90f" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\1a\7e64ad40e2fb6a004b58324899cc818533c946" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\1a\8d708e4c451cd1087396f2187a3a00edfd2556" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\1a\944f6e8ed37c10d0c7b37f96b62b09839dfb9e" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\1b\14c2923ccb12aa5671d6535e324dcc43b335ed" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\1b\9405740897215284ce19cc2f71cf94be7fae79" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\1c\437fd4a49ef6b02e842c1016cd8ce0d838dbb4" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\1c\9600d4ff16ed95c20ca4764247bd994ddf6b16" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\1c\d4c522bdfa98d9777105d5302eb7922f41bba4" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\1d\59f5c3e57a7fbffbdcbee946b2592d052d4347" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\1d\ecdf7fef05203e420b1757d76916374b92d3aa" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\1e\36fbfb8fc26137ee1a9feed67db1e231b214ca" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\1f\7cd7df47ae895b9a4de4c068575605b3bd74ca" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\20\00bb2fa471eeb4bffb2ca79904b1a49777b0d4" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\20\fb2c7229b1efadc76e40dbcf5c9803243c44f9" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\21\3cc2c05ce33d7a91cbaf1ca8456a43ddd04b4b" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\21\793d3e1f7087fa6d05b981518f08dd26f42364" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\22\348ca4ee347fe5dcf9c9985772568a18cdb2e3" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\22\d49250998cb0a3f0dcd5e18e5bfc5d6477d8bf" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\23\1dc3d185a9527c69e65cc9466cc22923a9eca7" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\23\587bd8ab7770694c5ce5c9798c18345e5f1339" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\23\69d4398e441b9772b5bf28dc87529a1b05bae2" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\23\7b8e158889e5777231d92ac3d795d4eb03bcf3" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\23\9d772b3d26142d333fb896ec9ec0ff01409aa3" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\26\2d07969bedef762ecc86ab9bb92a68aefceab8" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\27\03e5fbac603a796a6d1f06ddc8ee92474a9648" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\27\907bdb1b1cc94acf3229e47d73c96a9f27873e" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\27\ffe85615b6de1e60b21ebe8f4b57853290feca" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\28\6f7b7593bb5bb7b708a04f5487813ea10bb15d" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\28\83d7242474aaf32acab360e8e6a62ae693f4aa" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\28\ab10f34a8cd5863724600c76a4df7ce4a80184" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\28\efcd8ed97a89d6f535869dc182f6d19d07dc22" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\29\1059279bab0c47cf492c7275d993d03c39fdbb" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\29\44d7dde59171ef058d2531c85e8f4441609a32" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\2a\3144dca98dc4d96fded3d700ab608bd39f9ce8" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\2a\d21d28f1269efac3c08a855b2d1a5c7ba73998" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\2b\fd16ead12b965a18e7eba3dab5ae910af52da2" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\2c\0de33d0657c5d84200b24f2f37b4bde57a87f8" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\2c\4dcd377b3cf3fd1f29a6c684bb445b864f86dd" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\2c\e48a7462178f95790cb1f694f3559f6002ad62" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\2c\e6696a68da7bf782c5b2a4540edd3f33539216" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\2d\6399a0e9c3363884d556404d7f475205880a15" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\2d\be206d0e4247822811d059f1d04f90bd2bc9da" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\2d\c26c6ec73673de9b7ab4688113c3713d6838c8" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\2d\e5d1e7a7fdac3b0f61eb70e63097a65ecf3edc" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\2e\a18b31faaacac58a56500b4631602c7131a2fa" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\2f\8b016596d2c5991ae554f5e34868e1453b2504" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\2f\ec4cf93009c83ec0bd312d8707e22347c50d9b" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\31\4ba30be762b38cc638e11d2b98fa89dd4bff78" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\32\a34bbb102cee4877199374eaf0e50e90d05232" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\33\4d6932d696615fcaa36f96d7d333c566fd61e5" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\34\0297a704aa580b63df279b8157a75cafd4e756" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\35\0663d893110e0615d79819409b7bd58e7d89b7" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\37\626ea2eb16595d05666c77fe44d90634282aff" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\37\b09b454a09cbe92bf6f696fd6adc5f2bf3b615" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\37\e39d28311de5733e2296be3599c69b14316fc1" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\38\38ebdbd59244999fad4d77b1303f8205c3f4d8" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\38\5fd5208e6d35097fa1b0809ac79033e23cf1f2" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\3a\bb877b3f89dad80ef16608b2531d1ebb479655" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\3a\e7f4c0c39d46026f646ea44a7f7a9877cbea57" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\3a\e95bd741dad9535f3ecc33ff4803682f7aa319" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\3b\29e783fe56b29388891c039ef9bd838ea50874" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\3b\bed09383e04fdac7f898791b8cdcdfeee89d45" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\3d\7e5030b799730e3f639f4896c52dd2cc5dbcd3" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\3d\88726d0096806f44dc474d916124f0c4d74d3a" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\3d\9eb3274ec245df5ea8237dda6ccd8618e07f42" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\3d\bc7dab6312d6acd6b86c8f03581c938044f628" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\3e\39fa12d39396431e217d358331c36509cb99cf" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\3e\431e42233c28bf8628b23cf9050b9e59249722" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\3e\5fb6868eb70a82574d5fbd703396e6d6c7ad4d" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\3e\d9027d9936725e73dae27c1a9bcda3f65b3694" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\3f\0efedb1ca5cf9b901cc8aa44987fbcd24cc81d" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\3f\a31c3b551f10797ddae86fa905bb75bf6262f3" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\40\b991a22ea5792dd5435765c943cc80f23f1392" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\40\c0313468b5d774f19cd1030dcdd0d4eedd9684" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\40\c1550ff85d0632dfbc7ba0cf8464d81391c349" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\43\0e79c72197377a35a82380420ff39ab753665b" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\44\8ccfec736bc019d79cad5beb89da4e5b7f2ab6" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\44\f8dcba1f5e7dd2d276999c2ebf8345c8b25762" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\45\5d6903ca955b576cd0205b7481ccc01cae8cca" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\46\215dca976fdee1aa2929893d97adac7ee38355" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\46\2df93b6af64a903d0512a8f4723cea9cbb722c" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\46\375a74a597a583787bb360aa871e6a32be1f6b" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\46\b21c071c6abbc405d08b96957bba86e1a49703" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\46\bdfb876ec6bcd4d271f59ad09267db9e24e239" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\48\435d888c250c0caf8abd2b1ab4701cd9b93199" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\48\82272b8fdb768c2c4dd79e2b212b60dc5ec3f1" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\49\5ed19203ab04ff3a9b2449909df9c908b15776" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\49\a72490f335bda86f70ecf96112a5d2c6f5121c" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\49\e0e76221acd1792fd99fae7d1fc47f3ab61140" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\4a\aeb602fe3097721786a15a2a1976dea249c149" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\4a\e1454976441afb173a0924d83ea1eceeb83525" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\4b\3c5ca57590ce412abecf3a75c8fc131c652023" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\4b\d4779d209e5c5f53dd2f34aa450dd342ba627c" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\4d\9ac6490354b13aaf583712872235943dd2938c" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\4d\f7befc1f073fea5e2bd5fc3c02343e27e4757f" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\50\961136abb6950c3bf8d88be58e1eb6d3225984" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\50\a1a1fc3cb10069a784477ae871276a8252d913" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\50\c4f4df7fdddab1014525202872455a1b67f202" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\51\84fbbab4104b25c89090ded77945340f6869b6" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\51\f412e6f4921b7169e3daef5d5f5007db9141cb" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\52\0faa0297482bd1b25e6ef65f73fc75ff40a421" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\52\5c787cd110a0084d0870ce20df974f7fb3ebe2" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\52\876a377054ba71fb0a4d0f22f0dca3d3df9cf8" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\54\7068a52b85dd218c8b6945d2640ce1eeb66598" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\54\7b3a69782fddbdbe7cc2a9f4adbda06c2710f3" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\55\4169a42e7a6762775c8e4ab274a6332310e592" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\56\092f51a4f53bced39d2f77effcc9dd92a76845" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\56\adc6f74d80a0eb6d7f42a73cb64566309ab1aa" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\57\0a16fc69447935b21eb42e4dd15cdcc5ba7fea" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\57\6066c19333cfc0ecb6a9b1477d44e137c183ff" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\57\73f14bba46b5d409f140b39c01cf94315600b7" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\57\759cc08b4a6dfdc2b917c987dcf49c57e94e3a" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\57\7cf58e848372ca909728ffc67b462b84498cf1" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\58\34289a6b2beb88193fccafeed58a653c05900d" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\58\56473cbe04dc09564dd20c761d580554c21fc6" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\59\a39571710f1f6fb561caed93fafb0a8a8c609d" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\5a\01e7c63727f43b63c2ba265a0a9e9cec6e6d16" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\5a\8a685f91c8e683e7115d769582748a58b3b41a" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\5b\747f32c0c8246ad509cd899019c8332cef547a" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\5b\9b364f9c8f7d16ef1e6ee16916a23984a84e12" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\5b\b6714ad6b467145ad1af1a47737a6e5bd6bce3" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\5c\0d4be47dd5419e27e0f2a6fe6ca9b86eda813c" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\5c\9fcecde9fc7b1a563ae7625e405bc7d4751c17" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\5d\05769bf9d8410a57b4bb32266fe8646a5707fa" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\5d\89c352f26e9cce069ead3ba90a511a94f3b2c4" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\5e\1937a766fc9e79627c18ecd8538178e0c0fc7a" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\5e\2b17cbe398a6d0c1e76d1c4a0eeefd49171f80" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\5e\ae482d1db1a371c19716b58f08c05127f5f7df" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\5e\f21ccc2e924bc4dba39b2831e5dc75d18c4c04" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\5f\228f62a6b077b097b432229d437f5462683664" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\60\607053e0752ad988fb7adf905f1100d1393dbe" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\60\a8d1e46be25d8d248f2a62730178df862e2598" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\60\f068c0d56f4a65b3879093cc077e3a7d3ca9a4" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\62\a82a2de0d81ea09c91a3018987e035739b8c68" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\64\06ae0227adb345ca77d06fd65065def16ff5ca" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\64\bf661842073a089bb7572422c3c9abc6ce576f" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\64\de0051b1bdbde5488f01874a8daa3cd7adfcc9" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\64\fa37b67d486e0ad314e5c9a0fb37362a3afbbd" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\65\bbda296815c77671171ca9a35daa2a340bc520" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\66\bccc6a23fc69bdfbd5143ce5abf91cd87e9ab3" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\67\5cb8ad909a605dc8b81e3dd1f1fe9bc0a87724" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\67\5f1d2a5ed4e134ae938ecc511019f2b643e5a9" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\67\b9d2c66f7c2fde2567645fe1628dcb57be2408" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\67\e64d9ff320eaaf392cff9fee84d2849d8bf905" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\67\eb82d03861e3ac5f97eebbbeb0c28f53e2d08e" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\68\d32794b91c29c62ba1cd05fed6aac0e154b5d7" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\69\5fb719577954a7a3bb5dc8d2250dd8be130b35" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\69\826884a50afd09258327f86956c077caa43141" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\69\9fbc91434ed2462b23c5fe28635c74bd1ff25d" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\69\ab203f97be7cc252bb14ef23de1fcb368e410f" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\6a\57a77b6b9be46b2bc40551d52cc1d1771d175a" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\6a\764360856d7500647bdf204125ad1f02df617d" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\6a\8c95f15729dc71323f5e3ce60a20030ee20256" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\6b\03aa29319ff29f94651e45dbf8abee48da1fbd" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\6b\bcb90e6ac44b4c13ea547efe271c436071b139" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\6b\d3bddf1e0c23f03c8e9d9ba7631ad31dce4bee" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\6c\cc25e6abd07ab9eaba2ed0b530dd1478ad7cfb" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\6c\feca1a07bc17dfaf527e8fb837028c46e439b7" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\6d\bb601e5b632cf2eeffe134eebb64deff6fa96d" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\70\45903b6311a4de828ea6aad0ceafffc111e1f2" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\70\72366d084e1ca7fdc8d7d77bc7b3f3d89f4efd" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\70\deb908fd2911b53dc64602edab8df9d9b25c22" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\70\fe84fd3cfadbd5070140294c1872e258cf7cff" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\71\4110594460df96306393d6fef5116637622f72" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\71\b0124889d5bf4c69487276bce8d9b9878c5972" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\71\c0904978ff4192bd398d916d8b7747af19ee59" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\71\fcaee25114587b4b0ef535f5bf808dd75a8777" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\72\089d6307bcda1083087ed03e6c30615f12a9a0" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\72\6b6de8ec4c345ceff407396bda184648815261" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\72\a9535a7d96e39720ce8ad7d4da5bc4cbc940fa" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\73\2d9b1d8eeefd0e95a3dbe284f5320b7124f43c" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\73\56286ce3552c23248ec306dee27c32986e7eb0" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\73\7d36c24ad2967a16c4a37cd7f458398cf4a461" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\73\b3c12bcc24a16a75bb9dbffc30b06bf8c4c792" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\74\287f6ee1253ec2f21dd4c573fddf12c4380602" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\74\4866fe323ce80dfeb9e20bb7dc4c271b46fb4d" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\74\5117d889baab2351da464137edb7dadaa815da" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\74\96482708be2f94f602146fb84b55434d6e605a" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\75\26a43193da7c16851c772f3e2ce4f72208f18a" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\75\8061568071f6b86c1f7e59e9a2ea72bc1a0fd7" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\75\b444222c4022166e02ce463fbaa3371b40afcc" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\76\09a35733911c383ec74d9643f1d789140a798b" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\77\1f935f00f9ee293067cdb6a06bd3d998ad997e" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\77\5cc608f8f203c9b837744b19f11e114e1f6c93" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\77\8491baaea2045182552cc4d3e7c1a2db4266d2" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\79\131126c82dea68476db6ca6562d1827c6161a4" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\79\f685f46eedbc0570faf50cdc7a3584a2565278" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\7a\1ff7d5753ab261f465dd20261e1ed2bbefbefc" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\7a\657365ac383f322db0473bb83bea25d672fdb2" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\7a\e6d52a1658ff4e3ca1c827abbf88f30750d7a2" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\7b\550e3f221c28b957dfb48c16ede64ecde4a689" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\7b\71cb04d2cb9ae5a78c4af67df529f308f308a4" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\7c\30964197f3af332031a13c1b199d6e61dc70ca" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\7c\4f1e21e9c283cadc880caf4496628c40c64c00" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\7c\8224247e201ffb804bb2982209979818b034db" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\7c\dd6b0733881acd1b8a6ca62f05c8810fda394a" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\7d\767e7b5b688cbc7c50d0e7493af01e7ea11abf" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\7f\7c9e4f72f9410ef80354ad64fd6170e1cb4daf" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\7f\7f2a8b29bbdfc2f2b20be719947f160ebcd04d" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\7f\8cdbcac539f7f443d31854aaa69d5b24bd63ec" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\80\239da7a8beeb850904a6cf4a21f150e0fff449" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\80\e09d70e8cfda6db949ecc2d271c849e3922654" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\81\65ed380950c90d2e9c16d180f48e8f384d26f5" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\81\665dbb79f2fab7987f7c6026479cee18706525" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\82\057cb062b888d31cf123a560994523b736e351" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\82\7ad9d5b2291a57d028709a67a3f6ae9c039c6b" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\82\d2390f62866057aaadf577d14ead9636e5319e" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\83\d0f18d5c963a5069d623691090dd28ddc7e7bb" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\83\d8b853fa00ced09f1dd7249f3efba28bbd6829" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\84\6f2299321bd98610e25d83b73d53324eaab675" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\84\ad8a9c5b39f63e5b78dbd372b0eb5efe7fe360" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\85\313c06d76cc2d4b660bd0c7c11b7bea135e725" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\85\463f7c7d476c1eb1f4cb32038be49795cf8919" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\85\474fe9befcdbb464dbb2e1cb19619dcc4229af" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\85\c52a42bb1b8b10452cedf6223a041e45cdc2fb" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\86\5a85a4de9030fdda1da929cc880d4fd3a93b64" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\86\fdfe01f1d04b795e4564d3eac517ec669c1816" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\87\7a42a9db097a8795885422f9318018d1877581" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\87\abca92ef6ec15da91d111b79d90a0d5c2d8014" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\87\b4d1d9f010e83b9d3a5a60c697ef2b886e2624" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\87\cd696250765e9d61beb20b660654550ebae36a" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\87\da065930ca55fa078fc5bcca58c4a8168b3265" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\89\3a49654ee3066887e7fc8b0550539a2865b20c" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\8a\36be610c5e80198e8eb3088b7eeb6199293336" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\8a\a380067adcdc251309fd8ffb058c5a7519a4e5" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\8a\aa4b4a4cecf464bad6b714b9f8914ca0e237eb" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\8b\0f7e7b97fbd50eee5b8c24e708d4c02c948a82" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\8b\7dc2019322aa1fd273cc5f74974abda8f9f21a" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\8c\8d33fb57faf1b00e23db656ad6b8c6da55f334" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\8d\16df957e738b27b298d50b5e1e8de56f2dab03" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\8e\41ecb6f648575bc222df63cc49825eacb342e2" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\8e\6a15de1518633fb0f6b73dc25dc4001d4e82b9" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\8e\7afaea81c54d0d809d3aae0351cc24b4d81463" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\8e\8511d4eb6a8afd503686223c7cb88b01f8f6e0" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\8e\a6ded0f0d332a260878bd6d5f45d8860814a6b" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\8e\b13a4c62dd183dd749f695b614152f806fc6b4" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\8e\dd7de5a61019babd8960b31594fa0f3ce93b51" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\8e\fe8394b2f389da7a8fe47bbf1699a9a7b6141d" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\8f\458afffa0771486dea7adb97c062a7c8d6f7e4" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\8f\ee5d675deea66406aeea892a3e16e2ad6e773f" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\8f\f121432df8a4564cf8592471e931c09e56d3c6" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\90\294858ec2d533e88176d18e4e4f1156eeb75f3" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\90\63b18bf5462d264ac7a16020b6000e0286266e" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\90\6e2eaaa26463d6f55e3e128b25645842662abb" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\90\bef5ef126407bb2c6f7137b18688b9bc545bce" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\90\fd2c4c10e6b9b9009519f93526f6e968a412f3" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\91\4290987e6f36235c55d3ca634528116f881392" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\91\9bf3cace107060e78ef77932aaa233661cb065" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\92\1a785269b253ff1e0e2166a3a27de9c337f6bf" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\92\52b480bb820c8d4eca98adabd13b6bedcaa2fd" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\92\ad57a8e4535a643b31c6755cd70419734bf2f3" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\93\1f5e0664d2fef68f98d4255b6b805b49da37ac" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\94\4110440c94a7b331240d1f71760cb9bc367172" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\95\1e3ea43a2dbd18c45bbf4b8db24d3b2c0419f5" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\95\81d0d0031f34db165c1b151bdcd05386b4ca4b" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\95\a90a99e78c3099c72e2bfc00e2a9318e16abd7" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\95\f9cb7ca6ed5d6ae44d54d26f05182c5f4dee86" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\96\052526ec7f31b3eb9214c4a549840521ef934d" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\96\11ff20a0d9c26f38b435e9016ac8668357800d" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\96\51125fb4b03c3ee39eea5b8b7941d326a47c5e" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\96\71ed46100246d1c7b9cfb2922f99eed306de04" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\96\cd2cae68b91c80a46ae8b3ab4d7a911bace79d" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\96\e33c2c4ba7299541dd46415ea2ea07da112d1a" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\97\082853a0caef5b2d5fbace81537015e5e0d14d" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\97\232f8fd66b3b49fc61ff5c5d5a8348db8847e3" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\97\235c20f37a119b9edbae69c41e2ddc970b72f2" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\97\475bc1ecf0f66f47e2114bec11d8e23e6ea1a6" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\98\3cfde765341c77abe416f017063fcb6c6ddc4b" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\98\94fa7b26554ccf73c637cae7be39f6c6b7bcb8" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\98\a85afda81b38ce4112d9e659e578826f2b4271" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\98\f0d10b99f76ee15eca100bfb8041ef5a3f67ce" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\99\443e0f64d1f812468a104893ded7fc09655b0d" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\99\7259393f1d9b429584faeae7cf50b05d48378c" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\99\74536601ed026dbd69ccd1fd41a92ea6f34a33" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\9a\88f185f7a00f0303893bbd364e7a1bcaa13da6" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\9a\d450917d3b29c3d16aa510fb9f179bcc9ee20a" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\9b\15d0243d564206e9cb25f4015de3cd75803f57" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\9b\4d50265a24569bdc090fff19e470792ab33359" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\9b\e5b37909cee9e11b679a794956ac4884b48773" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\9d\961640a211e0f6a5773672f01dff1b319b0082" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\9e\4c2386e8db843b31867c06cbf3be3de3a9fe61" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\9f\27039f081f76abbc6622f556a1162e1bca4774" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\9f\7da0d666f7e25f28e2faba83827746cef54fb4" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\9f\9b63e2d978f6b2e6987b3f0e5d7192a3fde161" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\9f\b56e34fbd78e9ae61fcf5bca3356c81e782a53" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\9f\b7db112ee45893f8c7cda5694ac2d519ed8a52" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\9f\c377774e97df2b9dbc7242d7f5b504b1ec559d" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\9f\efbc93ba45dc6e808ab1b66dba3cd1721653df" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\a0\2a81d4e55f4dcba5340b7d101469b2f3bea535" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\a0\587e968b91a3f9277e600b4e1d043cebd6663c" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\a0\b9939e87c8d7652d476443336cef6137ab21bf" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\a0\de330f1fe27989c8ed3bf691b19c2598301b32" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\a0\f18656beeb33dc33fbeaae9d508a57e3ee941b" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\a1\7da3b8b82f05e2185de3b2d88351231a24b0d4" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\a2\0e72df0500198eefd99eaefd31331b0c27ae60" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\a2\456891979503826f7f29f1ccfbbc6f92c11b0c" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\a2\4b5bf54c0fdb6cedc15555ef03b2ca30c99383" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\a3\21e2f61424712a9ed6d2a71f4264dc56605ed8" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\a3\3f6e16a2cad02ef51caf24276ae423d6c3e1a8" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\a3\46931b60145a516f1dd83953d5960b5cf5a318" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\a3\5b9b013c01162e5969249df8fc0566ee49cc25" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\a3\aef54bc49ec6e3f674fa6e7bfa1a2f760e6ead" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\a3\b67e16633a1b2d02c9f371a026de7adbbe78ec" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\a3\d9f83547703277cfbfbeceaf5eb3f68c1e7be3" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\a4\1ae372d3443c7e10349cfe80fabfd905b6541e" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\a4\6eb6c1b9c6ca7e99b8d4af59651e892a8dc905" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\a5\66a5b746863fa3cf4f847d18f8f91cc4a7e879" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\a5\d86f6463de3aea108c14a54ea9cb037662d711" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\a6\2a9f5cc7457ece10426ce685b80f3af3790c09" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\a6\4f6f391175abdc764e3e3ecb35e82cdc1bb351" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\a6\633e32d57e663079df245c62dbf71bcb869eb6" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\a6\c05bc98054005e7619e834f6da64b3179ef9ec" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\a6\f0852dc4ee96e93070c9754cf05d73144c1ec4" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\a7\7b23f14dcca32780d80249080c79b0bdd016a5" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\a7\a723f9c57154505089dc30caf47489bfb0e86e" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\a7\c995a6d6603c52c9b40484a72d07130f3ce338" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\a9\418cd85186760f80bb5431aaa6aed5d6a0ddf1" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\a9\95f9c2b7b8c85bc82a483957b85e6e165fc5a3" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\ab\3374f5fecce1aa67eb60101f8a05fc2d38fd60" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\ac\96acbeb84458416cf9f2ae0f0107077da7781b" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\ac\d6cc091db8094834bed8141e2d48452f79079f" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\ad\f5689df0d6dcd2c275691ddd66e2679a3c9ce3" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\ae\aca8228b69277d210d58f7fcd7db04b733df4c" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\ae\fccb18a8008a8b81b5679824e925db67c27d4d" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\af\cadcaf392650a574479d2941c72f78bdfc13b2" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\b0\9fdb4349f35bf736fbf13fb1d010cc50bf46df" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\b0\a0d29eba275b1c7d252a81bd3ac6c8ee4c8c88" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\b1\0e1fe87ec83970ff5333745cb5d1ab595bd3d8" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\b2\344caa67e8cf70a502547abb43a095f215bd9f" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\b3\2ea7c92d9fbe753bf0c99738e318826291e37f" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\b4\9f9fd1f126a70285754d4d66defe5c5e799435" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\b4\ec897abfd12ed2e2f3e59d6f890e823e83de21" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\b5\d35d6182b407348845509849852c367f7ed59c" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\b6\866a7a4a6e79988551932e4f284dcd78d7a8f7" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\b6\c8132bc756ff422dccb22a2293846c50636f54" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\b7\180298695a44cb2adccf717a415124937a7570" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\b7\1f910ee351fa6aeefc3b3e004de0854c034e11" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\b7\bd9603fc53e0747335064cf964fda3e9a737ff" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\b7\eea61ae3a34e746dd357ed2eba15c25af4ce39" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\b8\b5c6037ee10b0f557265ef4220e18c151fbf91" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\b9\961eee0c940bb971e8508ef1ffc843467597f2" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\b9\c16149418524cf55f35362d556e5981af1a655" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\ba\40a7832c28f24564de08de86b5c519003473e6" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\ba\449a9f4bfa494fb0183996e3129fe7a4932aed" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\ba\58bb9a3125a31002f144467232dafcddf910e2" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\ba\d78c9cbbd20e488a37081431ed8898660649e2" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\bb\00a8c0535882ebbc8384af70fafe2e51edbec7" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\bb\42a5c0a2257d14a8d647282786a5bbc3cbbd67" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\bb\be5680da9152d8f30230e6a96abc33162b9ac5" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\bc\8f2d15ad432e8c2f1a6aff4612b0cfcee455bd" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\bc\92eb25a6e0d4a8fb561948ae9d9af8c454930a" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\bc\e6715b4b9af3ea3b00b541142bd92f7626173b" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\bc\ee7842182d959b656353604cf298edb79c8d59" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\bd\20b48d6cef6a60b8084728546fc7f738c94dbc" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\bd\462e7c71d79239cd02d68b3b78058491c67b30" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\bd\64639109294dbdc0c5632ecf9aeb2caadf1eb2" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\bd\c710a3643d1cc0bdcbf2aef49e0aae442a8d69" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\be\77a7cff3e78a9fe06673c4d7f02882db9ae126" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\be\b32db3ae51b30f5e5c2f6c8420b0fa009c2b00" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\be\f3a07de7e6b085a583871019d69361217145df" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\bf\fc972238a7c4b32f1cfa57906e812d590ad2da" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\c0\153019340d3b300fc1e467f42d4eb86b2dd9bd" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\c0\e5e983f53ff7084884181a79686316d9e4254d" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\c0\f6028b49391ff44cdc472d70d04e53c841f86b" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\c1\8a053fcde981c9ddf9fb1a0da5e687a7eb6363" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\c2\737fffb0ab6f98df0456488060734a9379d820" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\c2\75b30662e9ab2de3f337b0feceb8c514cc0313" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\c2\7c96819bb77179570d73be0d12d3aa063ca916" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\c3\46b3ea80b81f781d580aac87d21b26e5287393" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\c3\575ffb751123b3243df8f0474df1920542f26e" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\c3\81258a60d45147a02bdcaac4b6e2cc2dc8919b" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\c4\a8ad4c305b041993222494bd732404ea06de11" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\c5\32e15b0233b7d22d92a315f383ea6464c9a909" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\c5\359520452d54b263e34732daee715004e77a6c" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\c5\a09ead34cfecc907c56ac42a5fe0c5af762de7" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\c5\e729e96e2e27939e6a99997d73c9f2a76cfd5f" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\c7\1e128a5570923a186ad4a4746fc2ac116a19f7" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\c8\fb2a16f72f380e9e63d34d62d8fff22ee7492f" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\c8\fbe6b25ef64f59d24f109bd1250d42042e3d67" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\ca\7f19494ff1bfc669ec0828021de4fd9b92e90f" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\ca\c266a36e556e2c5f76a6032e3caa0f32ef8dcc" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\cb\ca9ea077d72becea4b12c09941ec0ea4f12777" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\ce\8fbffb47b3f57c44fa25955151669b687fc9e7" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\ce\da0e3b86380ad77e0f875b7144c0e786c93b5e" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\ce\db1752cb8509fedba77fda5a6131c65069fa62" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\ce\ee834b1156b33cee3cd488724ad60ccd6946d6" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\d2\08c4e8229f00dd11dca9d661c0a9fed5674eac" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\d2\c4ebeec9f2fc82abff06de54b98d6a5201d664" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\d3\082c9e84b90e2997ef443861b89fddf59b65d1" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\d3\f53f8e31ed7a54e4f0526987c348cbe3570b6e" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\d4\79705295e34d036cd8ef7116e49add04b89131" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\d4\7b4535714172b76cf6faee5a1952e5598e9003" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\d4\a1383e03a1176a5e42708e4bd383d5fe31e92f" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\d4\dd61c47f62eff89192eaa939ffda0cfdafcf22" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\d5\eaed7c1931eab17859c69b5803fe82d2ef3e7f" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\d5\f86c0d72de0903434d0b93a1adcc4c56b2366d" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\d6\a6fc3ec54fcfb7c43d3bdd24c7c2010f217fe5" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\d8\2ec0c24b530b37da15315643f96fc1e9e44ffd" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\da\1f03a00304cd83f7a2f0631cc383fa9a88cb4c" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\da\5633abd93afd149033fd41f105690c0ce8cb60" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\da\64255a0b01f7b913a006b7acc9ec3b51cb140d" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\da\a8676b0ab31db33f5ba38970ecab34196ef21b" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\db\427a01ba4ca8e2bbf6a46a6e2caa205fadc5d2" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\dc\7973eacd9eda5e5a5f53c1248db89d97758dd2" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\dc\d1a3ea82782c67adcbade286c5cd8d6a6bcb39" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\dc\db73e5a5fd03e7457911fb76c6d7108ebbcfaa" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\dc\e84d139a3ee2d48138e169b2286bff3728fa95" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\dd\d02ba4ad4670a6d850d79d8afc6d8fc45b468b" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\de\233609e41bb342f3ecd98017c58014cf479988" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\de\6af2b142c0d8dc7ee9c3799dc43f7f3044a727" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\de\bc26edd1fa92d0acd6bca715164bc8fd5e7f35" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\df\eee7a853edfd0031135f6333af91a3ed6fa063" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\e0\a379fb2d951234fddb085641aee9a683b91469" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\e0\b8e19d89ef209e28a11425c15f75ab8a6a01c1" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\e1\243f6f23f591db3ea8f7ec27694c3c4bb96eed" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\e2\d9fd69ca29b63dca5ab6e56aabbcdebdab8d22" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\e3\82c7b96d8b9221479b5479f884a859f011cc58" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\e4\00ef1b202624f9cfabcb3de888076a0decf7c9" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\e4\e87510922f9cb7b17ec928fd8b1281d2aa3a2c" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\e5\256aaf112ae0a511f461d68b0b78e4e0cd6601" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\e5\8a9e3c8a4b282583898addc5764564341ac95d" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\e5\c76bab2517545ba7f3104a1d7c5be7db3daeb9" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\e6\57504c4608d78fffa64fadbc33df49bd990479" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\e7\10aa5722e0a3ffc67fefcf47a23f1a441e6e96" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\e7\4b7650f8aeb80ca94daa4b1f9a5b5ff34ba777" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\e7\d64b2c93741ea1b914a9eb88920db3fd4642f0" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\e8\32426ae9a0448fd8178eafacde49a5ed682ffe" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\e8\c1e9749c471bf61a3a1d3b1e5f092da1aeaaed" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\e8\cfc63f6dc530f1bf5db9e80a43f78be5ac3176" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\e9\f20bea7e5dabc002b2110b13abb50689c86af0" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\ea\40a01c8439282cd2d5c1de252ea8f17f573213" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\ea\42d5e061cb0c8129c8af2f8c337fbcdd4718f5" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\ea\4e035b1b4635e7be7a39575a99baabb31045ae" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\ea\6b9ae1aad39e7a2a7bf5d4ae2ba65a66e5bbc7" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\ea\7835f54c3c9c6d90be96c3ecd41152736972c5" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\eb\531b16595f193bc3b527445561cc26d515d59d" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\eb\7dc413e307260c40744423781256c379b7b2f1" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\ec\c2ade03e0128420e617fa6befed4f301b10c98" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\ec\c3f7ed570cabec4be774e82ce180d8129d27ce" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\ed\0094a4a1ad25ecfbf11225b2084e6497633568" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\ed\e3f01db6202bf267a5f7bdff04cd2ce2226a70" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\ed\f477095abda928a1d1461ee06aa60f9c9f8257" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\ee\7df2bd671c51237981c2b22cc74cf4e3e29b75" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\ef\53be1e613b171d6f7cc6eb0ba1baac10712164" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\ef\8da651b6724579bea4012ac06c21f91ac5dbf1" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\f0\7f3df116aa703edb032e9ae328383d0bd2c22d" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\f0\9ee6ac3e5f5d48e8315ddadc07892ac15dbb83" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\f3\db6b7802e9a8d8dd08b14783c38c76466c9fcf" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\f4\cc0dfb95c8660d157bfb132c7b20578e01565d" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\f4\d94469ce4e97381b5402c34f0b8478cf59c376" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\f5\3d755392c6465274282f54648d8d6c7aefaae4" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\f5\642e8b5ade1bbe35fbd62cd8b9d8249ecb38a1" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\f5\ef86d0b8408af10376ca035d0bccfb9e4bda46" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\f6\801b80c3726fac6cd4b778b23c9b5e3b51e697" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\f6\bfa1bdbb0fab9a70386deee3d7fdb8650c94ac" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\f7\38a3ce838c3071746f0397c55f6df8ae7cad6b" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\f7\921ec418c5dec4532b7acddae09bc5179a2a22" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\f7\f5362e14ef167242bb0c2aa71b6216e3473ec5" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\f8\2379fae19e34f0ac18f59cf1384b092e0f9eab" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\f8\83d57508f821839bcf95a069603143737476e3" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\f8\ca9434c2c5a9c01165ea5597697f7890c9520d" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\f9\e94f4b42b78731d63ec9d52993237ccee75e16" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\fa\625af94b3e236a15558952f0729dd0c133842a" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\fa\8bb5ae5557b99a2b6fb332180b79db32f609cd" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\fb\e3b3962bb5a3aeb189a4d22dcbad0a246dff31" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\fb\eac733832993acfd31b84b8e25d5388f6906b1" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\fd\40a432e4e1cbe028a108f6db1bcae4500d7d08" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\fd\88a290124d785ddccc9f7583b041e8a5db8928" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\fe\3904b67b77cf8764f3de68d737336aa7469451" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\fe\aa9098f484326a8cccfe66270a0ed7b3698860" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\fe\cda96a49f23b317c701912ad2579006c319ce2" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\pack\pack-04378cd3a719cf4729dc9590f1b8bf9d7606b67e.idx" />
+    <Content Include="BackStage\js\fuwenben\.git\objects\pack\pack-04378cd3a719cf4729dc9590f1b8bf9d7606b67e.pack" />
+    <Content Include="BackStage\js\fuwenben\.git\ORIG_HEAD" />
+    <Content Include="BackStage\js\fuwenben\.git\packed-refs" />
+    <Content Include="BackStage\js\fuwenben\.git\refs\heads\master" />
+    <Content Include="BackStage\js\fuwenben\.git\refs\remotes\origin\HEAD" />
+    <Content Include="BackStage\js\fuwenben\.git\refs\remotes\origin\master" />
+    <Content Include="BackStage\js\fuwenben\.vs\config\applicationhost.config" />
+    <Content Include="BackStage\js\fuwenben\.vs\Kz.layedit\v15\.suo" />
+    <Content Include="BackStage\js\fuwenben\.vs\slnx.sqlite" />
+    <Content Include="BackStage\js\fuwenben\.vs\VSWorkspaceState.json" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\font\iconfont.eot" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\font\iconfont.ttf" />
+    <Content Include="BackStage\js\fuwenben\Content\Layui-KnifeZ\font\iconfont.woff" />
+    <Content Include="BackStage\js\fuwenben\LICENSE" />
+    <Content Include="BackStage\js\fuwenben\README.md" />
+    <Content Include="css\.DS_Store" />
+    <Content Include="img\_notes\购物车_填写订单.jpg.mno" />
+    <Content Include="js\.DS_Store" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="System\Log\2020-09-17.System.txt" />
+    <Content Include="System\Log\2020-09-22.System.txt" />
+    <Content Include="uploadfiles\video\439920200620104215_5956.mp4" />
+    <Content Include="uploadfiles\video\550420200613001930_4745.mp4" />
+    <Content Include="uploadfiles\video\634120200613003823_4813.mp4" />
+    <Content Include="uploadfiles\video\674320200620144303_8980.mp4" />
+    <Content Include="WebForm1.aspx" />
+    <Content Include="BackStage\web.config" />
+    <None Include="Properties\PublishProfiles\123.pubxml" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="api\PublicController.cs" />
+    <Compile Include="api\tbStaffLoginController.cs" />
+    <Compile Include="api\tbDiscussionController.cs" />
+    <Compile Include="api\tbRenewController.cs" />
+    <Compile Include="api\tbContractController.cs" />
+    <Compile Include="api\tbStaffController.cs" />
+    <Compile Include="api\tbCustomerController.cs" />
+    <Compile Include="api\tbProjectClassController.cs" />
+    <Compile Include="api\tbContractClassController.cs" />
+    <Compile Include="api\tbCustomerClassController.cs" />
+    <Compile Include="api\tbAdminController.cs" />
+    <Compile Include="App_Start\Config.cs" />
+    <Compile Include="App_Start\Data.cs" />
+    <Compile Include="App_Start\Exception.cs" />
+    <Compile Include="App_Start\HttpService.cs" />
+    <Compile Include="App_Start\Log.cs" />
+    <Compile Include="App_Start\Notify.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="App_Start\WxPayApi.cs" />
+    <Compile Include="business\DownloadBill.cs" />
+    <Compile Include="business\JsApiPay.cs" />
+    <Compile Include="business\MicroPay.cs" />
+    <Compile Include="business\NativeNotify.cs" />
+    <Compile Include="business\NativePay.cs" />
+    <Compile Include="business\OrderQuery.cs" />
+    <Compile Include="business\Refund.cs" />
+    <Compile Include="business\RefundQuery.cs" />
+    <Compile Include="business\ResultNotify.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.5.AssemblyAttributes.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="BackStage\js\fuwenben\.git\objects\info\" />
+    <Folder Include="BackStage\js\fuwenben\.git\refs\tags\" />
+    <Folder Include="BackStage\js\fuwenben\src\" />
+    <Folder Include="BackStage\upload\" />
+    <Folder Include="uploadfiles\img\" />
+    <Folder Include="upload\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{38d7aa58-c95b-449b-86c6-a8073a56e11f}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{e3d8759a-c5eb-402d-9f10-f5c6029a8d1a}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{9fe00521-3a8b-42b1-814e-585e99407b2e}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DBUtility\DBUtility.csproj">
+      <Project>{0988c62e-247f-471f-a183-db509c7a3839}</Project>
+      <Name>DBUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{53995dbb-9836-4647-ad22-865884fdeb9e}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3986</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3970/</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost:3970/</IISAppRootUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html class="x-admin-sm">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>欢迎页面2</title>
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8" />
+        <link rel="stylesheet" href="/css/font.css">
+        <link rel="stylesheet" href="/css/xadmin.css">
+        <script type="text/javascript" src="/lib/layui/layui.js" charset="utf-8"></script>
+        <script type="text/javascript" src="/js/xadmin.js"></script>
+        <script type="text/javascript" src="/js/jquery.min.js"></script>
+        <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+        <!--[if lt IE 9]>
+            <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+            <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+
+        <!-- 判断是否登录 -->
+        <script>
+            $(document).ready(function () {
+                var storage = window.localStorage;
+                $.ajax({
+                    type: "get",
+                    dataType: "json",
+                    url: "http://localhost:2000/api/tbAdmin/Exists?AdminUser=" + storage["AdminUser"] + "&AdminPass=" + storage["AdminPass"] + "",
+                    success: function (result) {
+                        var str = "";
+                        var data1 = result.rows;
+                        if (result.errorMsg) {
+                            alert(result.errorMsg);
+                            //跳转到首页
+                            location.href = '/login.html'
+                        } else {
+                        }
+                    }
+                })
+            });
+        </script>
+
+    </head>
+    <body>
+        <div class="layui-fluid">
+            <div class="layui-row">
+                <form class="layui-form">
+                    <div class="layui-form-item">
+                        <label for="UserNamel" class="layui-form-label">
+                            <span class="x-red">*</span>姓名
+                        </label>
+                        <div class="layui-input-inline">
+                            <input type="text" id="Name" name="Name" required="" lay-verify="Name" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item" pane="">
+                        <label class="layui-form-label">性别</label>
+                        <div class="layui-input-block">
+                            <input type="radio" id="Sex" name="Sex" value="男" title="男" checked="">
+                            <input type="radio" id="Sex" name="Sex" value="女" title="女">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label for="UserNamel" class="layui-form-label">
+                            <span class="x-red">*</span>地址
+                        </label>
+                        <div class="layui-input-inline">
+                            <input type="text" id="Address" name="Address" required="" lay-verify="Address" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label for="UserNamel" class="layui-form-label">
+                            <span class="x-red">*</span>手机
+                        </label>
+                        <div class="layui-input-inline">
+                            <input type="text" id="Mobile" name="Mobile" required="" lay-verify="Mobile" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label for="UserNamel" class="layui-form-label">
+                            <span class="x-red">*</span>备注
+                        </label>
+                        <div class="layui-input-inline">
+                            <input type="text" id="Remark" name="Remark" required="" lay-verify="Remark" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label for="L_repass" class="layui-form-label"></label>
+                        <button class="layui-btn" lay-filter="add" lay-submit="">增加</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script>layui.use(['form', 'layer', 'jquery'],
+            function() {
+                $ = layui.jquery;
+                var form = layui.form,
+                    layer = layui.layer;
+                //自定义验证规则
+                form.verify({
+                    Name: function (value) {
+                        if (value == "") {
+                            return '姓名不可为空';
+                        }
+                    }
+                });
+                //监听提交
+                form.on('submit(add)',
+                function(data) {
+                    console.log(data);
+                    var data1 = {
+                        "BPId":"",
+                        "Name": data.field.Name,
+                        "Sex": data.field.Sex,
+                        "Address": data.field.Address,
+                        "Mobile":data.field.Mobile,
+                        "Remark":data.field.Remark,
+                        "AddDate": "",
+                        "MidDate": "",
+                        "is_del":1,
+                    }
+                    console.log(data1);
+                    //发异步，把数据提交给php
+                    $.ajax({  
+                        type: "POST",
+                        url: "http://localhost:2000/api/tbStaff/Save",
+                        data:data1,
+                        dataType: "json",
+                        success: function (result) {
+                            if (result.errorMsg) {
+                                layer.msg("添加失败", { icon: 5 });
+                            } else {
+                                layer.alert("增加成功", {
+                                    icon: 6
+                                },
+                                function () {
+                                    //关闭当前frame
+                                    xadmin.close();
+                                    // 可以对父窗口进行刷新 
+                                    xadmin.father_reload();
+                                });
+                                //控制回车不可无限提交
+                                $(':focus').blur();
+                            }
+                        }
+                    });
+                    return false;
+                });
+            });</script>
+    </body>
+</html>

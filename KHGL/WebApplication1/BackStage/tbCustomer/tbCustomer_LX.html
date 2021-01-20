@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Userlist</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8" />
+    <link rel="stylesheet" href="/css/font.css">
+    <link rel="stylesheet" href="/css/xadmin.css">
+    <script src="/lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/js/xadmin.js"></script>
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script>
+        var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+        var hash = hashes[0].split('=');
+        var id = hash[1];
+        $.ajax({
+            type: "get",
+            dataType: "json",
+            url: "http://localhost:2000/api/tbCustomer/GetDetails",
+            data: {
+                id: id
+            },
+            success: function (result) {
+                if (result.errorMsg) {
+                    $.messager.alert({
+                        title: '错误',
+                        msg: result.errorMsg
+                    });
+                } else {
+                    document.getElementById("id").value = id;
+                    document.getElementById("Phone").value = result.rows.Phone;
+                    document.getElementById("Mobile").value = result.rows.Mobile;
+                    document.getElementById("Fax").value = result.rows.Fax;
+                    document.getElementById("Email").value = result.rows.Email;
+                }
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="layui-fluid">
+        <div class="layui-row">
+            <form class="layui-form">
+                <input type="text" id="id" name="id" style="display:none">
+                <div class="layui-form-item">
+                    <label for="UserNamel" class="layui-form-label">
+                        <span class="x-red">*</span>座机
+                    </label>
+                    <div class="layui-input-inline">
+                        <input type="text" id="Phone" name="Phone" required="" lay-verify="Phone" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="UserNamel" class="layui-form-label">
+                        <span class="x-red">*</span>手机
+                    </label>
+                    <div class="layui-input-inline">
+                        <input type="text" id="Mobile" name="Mobile" required="" lay-verify="Mobile" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="UserNamel" class="layui-form-label">
+                        <span class="x-red">*</span>传真
+                    </label>
+                    <div class="layui-input-inline">
+                        <input type="text" id="Fax" name="Fax" required="" lay-verify="Fax" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="UserNamel" class="layui-form-label">
+                        <span class="x-red">*</span>邮箱
+                    </label>
+                    <div class="layui-input-inline">
+                        <input type="text" id="Email" name="Email" required="" lay-verify="Email" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+</script>
